@@ -1,0 +1,15 @@
+
+<p>
+  <strong>Post:</strong>
+  <%= post.body %>
+</p>
+<p>
+  <strong>userpost:</strong>
+  <%= post.author_user %>
+</p>
+<p>
+<%= link_to "Destroy Post", [post.user, post], data: {
+              turbo_method: :delete,
+              turbo_confirm: "Are you sure?"
+            } %>
+</p>

@@ -1,0 +1,13 @@
+<div><%= @user.first_name %>
+   <%= @user.last_name %>
+   <%= link_to "Edit", edit_user_path(@user) %>
+   <%= link_to "Destroy", user_path(@user), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+    <%= link_to "Back",  root_path %>            
+</div>
+<h2>Users Post</h2>
+<%= render @user.posts %>
+<h2>Add a post:</h2>
+<%= render 'posts/form' %>
